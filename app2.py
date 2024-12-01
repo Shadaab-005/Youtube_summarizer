@@ -3,7 +3,9 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from youtube_transcript_api.formatters import JSONFormatter
 import re
 import json
-from langchain.document_loaders import TextLoader
+# from langchain.document_loaders import TextLoader
+from langchain_community.document_loaders import TextLoader
+
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from sentence_transformers import SentenceTransformer, CrossEncoder
 import numpy as np
