@@ -5,14 +5,13 @@ import re
 import json
 # from langchain.document_loaders import TextLoader
 from langchain_community.document_loaders import TextLoader
-
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from sentence_transformers import SentenceTransformer, CrossEncoder
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from rank_bm25 import BM25Okapi
 from openai import OpenAI
-
+import google.generativeai as genai
 # Initialize models only once
 @st.cache_resource
 def load_models():
@@ -70,12 +69,14 @@ def chunk_embed(text, chunk_size=400):
 
 # Function to get GPT response using the updated OpenAI API
 def get_response(prompt):
-    client = OpenAI(api_key=st.session_state["api_key"])
-    chat_completion = client.chat.completions.create(
-        messages=[{"role": "user", "content": prompt}],
-        model="gpt-4o-mini",
-    )
-    return chat_completion.choices[0].message.content.strip()
+    # print(st.session_state["api_key"])
+    # print("sfsdfsdfsdfs")
+    genai.configure(api_key="AIzaSyA0JsQt9Ra1mvwjoI_LajWMx7Z9MwwDPOw")
+    # client = GeminiClient(api_key=st.session_state["api_key"])
+    model = genai.GenerativeModel("gemini-1.5-flash")
+    response = model.generate_content(prompt)
+    return response.text 
+
 
 # Function to answer questions based on selected ranking method
 def answer_question(query, top_k, option):
