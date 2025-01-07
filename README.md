@@ -19,7 +19,7 @@ The **YouTube Video Summarizer & Q&A** application provides the following featur
 - **Video Transcript Extraction:** Extracts transcripts of YouTube videos using the **YouTube Transcript API**.
 - **Text Chunking & Embedding:** Splits the video transcript into chunks and generates embeddings using **Sentence Transformers**.
 - **Question Answering:** Allows users to ask questions about the video’s content and ranks relevant sections using various ranking methods.
-- **Summarization:** Uses **OpenAI’s GPT** model to generate a summary of the video.
+- **Summarization:**  Uses **Google Gemini** models to generate a summary of the video.
 
 ---
 
@@ -38,7 +38,7 @@ cd youtube-video-summarizer
 
 ### 3\. **Required API Keys:**
 
-*   You will need an **OpenAI API key** for text summarization and answering questions. Enter your API key in the sidebar after running the app.
+*   You will need an **Google Gemini API key** for text summarization and answering questions. Enter your API key in the sidebar after running the app.
 
 * * *
 
@@ -94,7 +94,7 @@ The following models are used in the application:
 3.  **BM25:**  
     A traditional ranking method for document retrieval used for comparing query and document relevance.
     
-4.  **OpenAI GPT:**  
+4.  **Google Gemini Models:**  
     Used for generating summaries and answering questions based on the video content.
     
 
@@ -107,8 +107,7 @@ The following models are used in the application:
     
     *   High-quality video summary generation.
     *   Accurate answers based on document ranking methods.
-*   **Demo Video:**  
-    You can try the demo for your YouTube video by running the application and processing your desired video URL.
+
     
 
 * * *
