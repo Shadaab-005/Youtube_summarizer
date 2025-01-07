@@ -1,6 +1,6 @@
 # **YouTube Video Summarizer & Q&A**
 
-This project allows users to summarize YouTube videos and ask questions related to the content of the video. The application uses **Streamlit**, **YouTube Transcript API**, and **Google Gemini** to provide video summaries and answers to questions based on the video’s transcript.
+This project allows users to summarize YouTube videos and ask questions related to the content of the video. The application uses **Streamlit**, **YouTube Transcript API**, and **Google Gemini** models to provide video summaries and answers to questions based on the video’s transcript.
 
 
 
