@@ -1,7 +1,7 @@
 streamlit
 youtube_transcript_api
 rank_bm25
-google-generativeai
+openai
 langchain
 langchain-community
 sentence_transformers
